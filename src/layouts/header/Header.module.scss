@@ -1,0 +1,25 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+header {
+  padding: 40px 20px;
+  .headerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navigation {
+      display: flex;
+      align-items: center;
+      .contactUsBtn {
+        margin-left: 74px;
+        @include responsive(md) {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+  @include responsive(md) {
+    padding: 20px;
+  }
+}

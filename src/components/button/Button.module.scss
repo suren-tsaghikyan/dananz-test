@@ -1,0 +1,44 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+button {
+  padding: 14px 32px;
+  font-family: $fontFamily;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  border: none;
+  outline: 1px;
+  outline-style: solid;
+  cursor: pointer;
+  background: none;
+  transition: 0.3s ease;
+  &.primary {
+    outline-color: $primaryColor;
+    background: $primaryColor;
+    color: $white;
+    &:hover {
+      background: none;
+      color: $primaryColor;
+    }
+    &:focus {
+      outline: 1px solid $primaryColor;
+    }
+  }
+  &.light {
+    outline-color: $white;
+    background: $white;
+    color: $darkCharcoal;
+    &:hover {
+      background: none;
+      color: $white;
+    }
+    &:focus {
+      outline: 1px solid $white;
+    }
+  }
+  @include responsive(md) {
+    padding: 8px 18px;
+  }
+}

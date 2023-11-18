@@ -1,0 +1,31 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+nav {
+  ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    li {
+      a {
+        color: $darkCharcoal;
+        text-decoration: none;
+        font-family: $fontFamily;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        cursor: pointer;
+        &.active {
+          font-weight: 600;
+        }
+      }
+      &:not(:last-of-type) {
+        margin-right: 24px;
+      }
+    }
+  }
+  @include responsive(md) {
+    display: none;
+  }
+}

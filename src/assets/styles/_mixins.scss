@@ -1,0 +1,27 @@
+@mixin responsive($breakpoint) {
+  @if $breakpoint == sm {
+    @media only screen and (max-width: 575.98px) {
+      @content;
+    }
+  }
+  @if $breakpoint == md {
+    @media only screen and (max-width: 767.98px) {
+      @content;
+    }
+  }
+  @if $breakpoint == lg {
+    @media only screen and (max-width: 992.98px) {
+      @content;
+    }
+  }
+  @if $breakpoint == xl {
+    @media only screen and (max-width: 1199.98px) {
+      @content;
+    }
+  }
+  @if $breakpoint == xxl {
+    @media only screen and (max-width: 1399.98px) {
+      @content;
+    }
+  }
+}

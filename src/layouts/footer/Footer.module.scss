@@ -1,0 +1,213 @@
+@import "../../assets/styles/variables";
+@import "../../assets/styles/mixins";
+
+footer {
+  .contactUsSection {
+    background-color: $primaryColor;
+    padding: 40px;
+    .contactUsSectionContainer {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 155px;
+      align-items: center;
+      > div {
+        &:nth-of-type(1) {
+          color: $white;
+          font-family: $fontFamily;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 56px;
+          @include responsive(xl) {
+            font-size: 26px;
+            line-height: 52px;
+          }
+          @include responsive(lg) {
+            text-align: center;
+          }
+          @include responsive(md) {
+            font-size: 24px;
+            line-height: 50px;
+          }
+          @include responsive(sm) {
+            font-size: 18px;
+            line-height: 30px;
+          }
+        }
+        &:nth-of-type(2) {
+          p {
+            color: #d9d9d9;
+            font-family: $fontFamily;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+            margin-bottom: 20px;
+            @include responsive(lg) {
+              text-align: center;
+            }
+            @include responsive(md) {
+              font-size: 16px;
+              line-height: 26px;
+            }
+            @include responsive(sm) {
+              font-size: 14px;
+              line-height: 24px;
+            }
+          }
+          @include responsive(lg) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+      @include responsive(xl) {
+        grid-gap: 100px;
+      }
+      @include responsive(lg) {
+        grid-template-columns: 1fr;
+        grid-gap: 40px;
+      }
+      @include responsive(md) {
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+      }
+    }
+    @include responsive(md) {
+      padding: 20px;
+    }
+  }
+  .footer {
+    padding: 80px 20px;
+    .footerContainer {
+      display: flex;
+      justify-content: space-between;
+      .logoWithText {
+        .text {
+          color: $darkCharcoal;
+          font-family: $fontFamily;
+          font-size: 36px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 60px;
+          max-width: 481px;
+          margin-right: 60px;
+          @include responsive(lg) {
+            font-size: 28px;
+            line-height: 40px;
+          }
+          @include responsive(md) {
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 30px;
+          }
+          @include responsive(sm) {
+            font-size: 20px;
+            line-height: 26px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+      .formWithSocialAccounts {
+        .subscibe {
+          .label {
+            display: flex;
+            align-items: center;
+            > span {
+              width: 14px;
+              height: 14px;
+              border-radius: 50%;
+              background-color: $darkCharcoal;
+              margin-right: 10px;
+            }
+            > label {
+              color: $darkCharcoal;
+              font-family: $fontFamily;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 28px;
+              @include responsive(md) {
+                font-size: 16px;
+                line-height: 26px;
+              }
+              @include responsive(sm) {
+                font-size: 14px;
+                line-height: 24px;
+              }
+            }
+          }
+          .textField {
+            position: relative;
+            margin-bottom: 40px;
+            input {
+              width: 100%;
+              border: none;
+              border-bottom: 1px solid #141414;
+              padding: 15px 0px;
+              color: $darkCharcoal;
+              font-family: $fontFamily;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 26px;
+              &::placeholder {
+                color: #d9d9d9;
+              }
+            }
+            svg {
+              position: absolute;
+              right: 0;
+              top: 15px;
+            }
+          }
+          .followUs {
+            display: flex;
+            justify-content: flex-end;
+            .followUsContainer {
+              label {
+                display: block;
+                color: $darkCharcoal;
+                font-family: $fontFamily;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 26px;
+                margin-bottom: 10px;
+                @include responsive(md) {
+                  text-align: center;
+                }
+              }
+              .socialIcons {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                grid-gap: 25px;
+                > a {
+                  display: block;
+                  background-color: #d9d9d9;
+                  border-radius: 50%;
+                  width: 32px;
+                  height: 32px;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                }
+              }
+            }
+            @include responsive(md) {
+              justify-content: center;
+            }
+          }
+        }
+      }
+      @include responsive(md) {
+        display: block;
+      }
+    }
+    @include responsive(md) {
+      padding: 20px;
+    }
+  }
+}
